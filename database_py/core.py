@@ -28,13 +28,13 @@ class Getter:
         ''' Sets which information show to which users '''
 
         if self.login == 'admin' and self.password == 'admin':
-            getall = self.cursor.execute('''SELECT * FROM table''')
-            for row in getall:
+            get_all = self.cursor.execute('''SELECT * FROM table''')
+            for row in get_all:
                 print(row)
 
         elif self.login == 'test' and self.password == 'test':
-            getall = self.cursor.execute('''SELECT row, row2 FROM table''')
-            for row in getall:
+            get_parts = self.cursor.execute('''SELECT row, row2 FROM table''')
+            for row in get_parts:
                 print(row)
 
         else:
