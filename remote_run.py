@@ -27,7 +27,7 @@ class Connection:
             port='22'
             )
         #command to execute, doesn't work with sudo... yet
-        _, stdout, stderr = client.exec_command('path/to/run.py')
+        _, stdout, stderr = client.exec_command('python3 path/to/run.py')
         data = stdout.read() + stderr.read()
         fxdata = data.decode().replace("'", '').replace(")", '').replace("(", '').replace(",", ':')
         print('\n%s' % fxdata)
